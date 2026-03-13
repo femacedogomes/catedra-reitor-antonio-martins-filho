@@ -1,7 +1,7 @@
 import type { HomepageData, NavigationData, FooterData } from "@/types";
 
 export const mockNavigation: NavigationData = {
-  logoText: "UNIVET",
+  logoText: "CATEDRA",
   links: [
     { label: "About", href: "/about" },
     { label: "Academics", href: "/academics", children: [{ label: "Programs", href: "/programs" }, { label: "Courses", href: "/courses" }] },
@@ -15,7 +15,7 @@ export const mockNavigation: NavigationData = {
 };
 
 export const mockFooter: FooterData = {
-  logoText: "UNIVET",
+  logoText: "CATEDRA",
   tagline: "Excellence In Education, Innovation For Life",
   columns: [
     {
@@ -66,23 +66,23 @@ export const mockFooter: FooterData = {
     { platform: "linkedin", href: "https://linkedin.com" },
     { platform: "youtube", href: "https://youtube.com" },
   ],
-  copyright: "© 2024 Univet University. All rights reserved.",
+  copyright: "© 2024 Catedra UFC. All rights reserved.",
 };
 
 export const mockHomepage: HomepageData = {
   hero: {
-    eyebrow: "Welcome to Univet University",
+    eyebrow: "Welcome to Catedra UFC",
     title: "Excellence In Education\nInnovation For Life",
     subtitle: "Shaping the future through world-class education, groundbreaking research, and a vibrant community of scholars.",
     ctaLabel: "Apply For Fall 2025",
     ctaHref: "/apply",
   },
   aboutSection: {
-    eyebrow: "About Univet University",
-    title: "Experience the Difference at Univet University",
-    description: "At Univet University, we believe in transforming lives through education. Our diverse programs, exceptional faculty, and state-of-the-art facilities create an environment where students thrive academically and personally.",
+    eyebrow: "About Catedra UFC",
+    title: "Experience the Difference at Catedra UFC",
+    description: "At Catedra UFC, we believe in transforming lives through education. Our diverse programs, exceptional faculty, and state-of-the-art facilities create an environment where students thrive academically and personally.",
     tabs: [
-      { label: "Years", content: "With over 150 years of academic excellence, Univet has shaped generations of leaders and innovators." },
+      { label: "Years", content: "With over 150 years of academic excellence, Catedra has shaped generations of leaders and innovators." },
       { label: "Skills", content: "Our curriculum combines theoretical knowledge with practical skills, preparing graduates for real-world challenges." },
       { label: "Fellows", content: "Join a community of over 50,000 distinguished alumni who are making an impact across the globe." },
     ],
@@ -116,7 +116,7 @@ export const mockHomepage: HomepageData = {
   },
   applicationForm: {
     title: "Apply For Admission",
-    subtitle: "Take the first step toward your future at Univet University. Complete the form below and our admissions team will be in touch.",
+    subtitle: "Take the first step toward your future at Catedra UFC. Complete the form below and our admissions team will be in touch.",
     fields: [
       { name: "firstName", label: "First Name", type: "text", placeholder: "First Name", required: true, halfWidth: true },
       { name: "lastName", label: "Last Name", type: "text", placeholder: "Last Name", required: true, halfWidth: true },
@@ -134,9 +134,9 @@ export const mockHomepage: HomepageData = {
     ctaLabel: "View More",
     ctaHref: "/testimonials",
     testimonials: [
-      { _id: "1", name: "Katherine Murphy", role: "Graduate Student", quote: "Univet University gave me the tools and confidence to pursue my dreams. The faculty are incredibly supportive and the facilities are world-class." },
+      { _id: "1", name: "Katherine Murphy", role: "Graduate Student", quote: "Catedra UFC gave me the tools and confidence to pursue my dreams. The faculty are incredibly supportive and the facilities are world-class." },
       { _id: "2", name: "Cameron O'Donnell", role: "Undergraduate Student", quote: "The campus life here is incredible. I have grown not just academically but personally through the diverse community and programs available." },
-      { _id: "3", name: "Savannah Hassan", role: "PhD Candidate", quote: "The research opportunities at Univet are unmatched. I have been able to work on cutting-edge projects with leading experts in my field." },
+      { _id: "3", name: "Savannah Hassan", role: "PhD Candidate", quote: "The research opportunities at Catedra are unmatched. I have been able to work on cutting-edge projects with leading experts in my field." },
     ],
   },
   coursesSection: {
@@ -166,7 +166,7 @@ export const mockHomepage: HomepageData = {
   },
   campusLifeSection: {
     eyebrow: "Campus Life",
-    title: "Univet Campus Life",
+    title: "Catedra Campus Life",
     description: "Discover a vibrant campus community with state-of-the-art facilities, diverse student organizations, and countless opportunities for growth beyond the classroom.",
     ctaLabel: "Explore Campus",
     ctaHref: "/campus-life",

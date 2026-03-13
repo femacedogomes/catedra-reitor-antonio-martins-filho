@@ -1,4 +1,4 @@
-# Univet University — Next.js + Sanity
+# Catedra UFC — Next.js + Sanity
 
 Site institucional universitário construído com **Next.js 15**, **Tailwind CSS** e **Sanity CMS**.
 
@@ -85,7 +85,7 @@ npm run dev
 ```
 
 - **Site:** http://localhost:3000
-- **Sanity Studio:** http://localhost:3000/studio
+- **Sanity Studio:** http://localhost:3333/studio
 
 ---
 

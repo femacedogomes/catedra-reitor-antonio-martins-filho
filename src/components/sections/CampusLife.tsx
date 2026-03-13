@@ -23,7 +23,7 @@ export default function CampusLife({ data }: CampusLifeProps) {
         <div className="absolute inset-0">
           <Image
             src={data.mainImage?.asset?.url || "/images/campus-life-main-1.png"}
-            alt="Univet Campus"
+            alt="Catedra Campus"
             fill
             className="object-cover"
           />

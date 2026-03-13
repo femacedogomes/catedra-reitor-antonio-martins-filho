@@ -6,7 +6,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Univet University — Excellence In Education",
+  title: "Catedra UFC — Excellence In Education",
   description: "Shaping the future through world-class education, groundbreaking research, and a vibrant community of scholars.",
 };
 
