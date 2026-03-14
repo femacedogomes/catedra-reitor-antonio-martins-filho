@@ -1,5 +1,6 @@
-import { getHomepage } from "@/lib/sanity/queries";
+import { getPrograms, getNews, getTestimonials } from "@/lib/sanity/queries";
 import { mockHomepage } from "@/lib/sanity/mockData";
+import { mergeWithFallback } from "@/lib/sanity/client";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import StatsBar from "@/components/sections/StatsBar";
@@ -14,11 +15,27 @@ import type { HomepageData } from "@/types";
 export const revalidate = 60; // ISR — revalidate every 60 seconds
 
 export default async function HomePage() {
+  // Start with mock data
   let data: HomepageData = mockHomepage;
 
   try {
-    const sanityData = await getHomepage();
-    if (sanityData) data = sanityData;
+    // Fetch only Programs, News, and Testimonials from Sanity
+    const [programsData, newsData, testimonialsData] = await Promise.all([
+      getPrograms(),
+      getNews(),
+      getTestimonials(),
+    ]);
+
+    // Merge Sanity data with mock data for these sections only
+    if (programsData) {
+      data.programsSection = mergeWithFallback(programsData, mockHomepage.programsSection);
+    }
+    if (newsData) {
+      data.newsSection = mergeWithFallback(newsData, mockHomepage.newsSection);
+    }
+    if (testimonialsData) {
+      data.testimonialsSection = mergeWithFallback(testimonialsData, mockHomepage.testimonialsSection);
+    }
   } catch {
     // Falls back to mock data in development or when Sanity is not configured
   }

@@ -7,12 +7,15 @@ interface HeroProps {
 }
 
 export default function Hero({ data }: HeroProps) {
+  // Use provided background image or fallback to default
+  const backgroundImageUrl = data.backgroundImage?.asset?.url || "/images/hero-background-1.png";
+
   return (
     <section className="relative min-h-screen flex items-end pb-16 md:pb-24 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-background-1.png"
+          src={backgroundImageUrl}
           alt="University campus"
           fill
           className="object-cover object-center"

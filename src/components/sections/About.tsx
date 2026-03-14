@@ -12,6 +12,8 @@ interface AboutProps {
 
 export default function About({ data }: AboutProps) {
   const [activeTab, setActiveTab] = useState(0);
+  // Use provided image or fallback to default
+  const imageUrl = data.leftImage?.asset?.url || "/images/about-left-image-1.png";
 
   return (
     <section className="py-16 md:py-24 bg-cream">
@@ -21,7 +23,7 @@ export default function About({ data }: AboutProps) {
           <div className="relative">
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
-                src="/images/about-left-image-1.png"
+                src={imageUrl}
                 alt="University campus"
                 fill
                 className="object-cover"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { getNavigation, getFooter } from "@/lib/sanity/queries";
 import { mockNavigation, mockFooter } from "@/lib/sanity/mockData";
+import { mergeWithFallback } from "@/lib/sanity/client";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -16,8 +17,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   try {
     const [nav, footer] = await Promise.all([getNavigation(), getFooter()]);
-    if (nav) navData = nav;
-    if (footer) footerData = footer;
+    if (nav) navData = mergeWithFallback(nav, mockNavigation);
+    if (footer) footerData = mergeWithFallback(footer, mockFooter);
   } catch {
     // Falls back to mock data in development
   }

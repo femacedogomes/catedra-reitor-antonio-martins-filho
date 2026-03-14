@@ -22,8 +22,8 @@ const config: Config = {
         "cream-dark": "#EDE8DF",
       },
       fontFamily: {
-        serif: ["Georgia", "Times New Roman", "serif"],
-        sans: ["'Trebuchet MS'", "Helvetica", "sans-serif"],
+        serif: ["Degular", "Georgia", "Times New Roman", "serif"],
+        sans: ["Degular", "'Trebuchet MS'", "Helvetica", "sans-serif"],
       },
     },
   },

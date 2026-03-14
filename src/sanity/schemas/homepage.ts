@@ -3,6 +3,9 @@ export const homepageSchema = {
   title: "Homepage",
   type: "document",
   fields: [
+    // Hero Section — MOCKADO (não preenchível no Sanity)
+    // Use mockData.ts para alterações
+    /*
     {
       name: "hero",
       title: "Hero Section",
@@ -16,6 +19,11 @@ export const homepageSchema = {
         { name: "backgroundImage", title: "Background Image", type: "image", options: { hotspot: true } },
       ],
     },
+    */
+
+    // About Section — MOCKADO (não preenchível no Sanity)
+    // Use mockData.ts para alterações
+    /*
     {
       name: "aboutSection",
       title: "About Section",
@@ -51,6 +59,11 @@ export const homepageSchema = {
         { name: "badgeValue", title: "Badge Value", type: "string" },
       ],
     },
+    */
+
+    // Stats Bar — MOCKADO (não preenchível no Sanity)
+    // Use mockData.ts para alterações
+    /*
     {
       name: "statsBar",
       title: "Stats Bar",
@@ -67,6 +80,9 @@ export const homepageSchema = {
         },
       ],
     },
+    */
+
+    // Programs Section — ATIVO NO SANITY
     {
       name: "programsSection",
       title: "Programs Section",
@@ -84,6 +100,10 @@ export const homepageSchema = {
         },
       ],
     },
+
+    // Application Form — MOCKADO (não preenchível no Sanity)
+    // Use mockData.ts para alterações
+    /*
     {
       name: "applicationForm",
       title: "Application Form",
@@ -112,6 +132,9 @@ export const homepageSchema = {
         { name: "submitLabel", title: "Submit Button Label", type: "string" },
       ],
     },
+    */
+
+    // Testimonials Section — ATIVO NO SANITY
     {
       name: "testimonialsSection",
       title: "Testimonials Section",
@@ -129,6 +152,10 @@ export const homepageSchema = {
         },
       ],
     },
+
+    // Courses Section — MOCKADO (não preenchível no Sanity)
+    // Use mockData.ts para alterações
+    /*
     {
       name: "coursesSection",
       title: "Courses Section",
@@ -146,6 +173,9 @@ export const homepageSchema = {
         },
       ],
     },
+    */
+
+    // News Section — ATIVO NO SANITY
     {
       name: "newsSection",
       title: "News Section",
@@ -163,6 +193,10 @@ export const homepageSchema = {
         },
       ],
     },
+
+    // Campus Life Section — MOCKADO (não preenchível no Sanity)
+    // Use mockData.ts para alterações
+    /*
     {
       name: "campusLifeSection",
       title: "Campus Life Section",
@@ -177,5 +211,6 @@ export const homepageSchema = {
         { name: "gallery", title: "Gallery Images", type: "array", of: [{ type: "image", options: { hotspot: true } }] },
       ],
     },
+    */
   ],
 };
