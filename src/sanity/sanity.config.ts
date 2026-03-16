@@ -4,7 +4,7 @@ import { homepageSchema } from "./schemas/homepage";
 import {
   programSchema,
   courseSchema,
-  testimonialSchema,
+  coordinatorSchema,
   newsPostSchema,
   navigationSchema,
   footerSchema,
@@ -21,7 +21,7 @@ export default defineConfig({
       homepageSchema,
       programSchema,
       courseSchema,
-      testimonialSchema,
+      coordinatorSchema,
       newsPostSchema,
       navigationSchema,
       footerSchema,

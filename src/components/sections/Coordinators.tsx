@@ -4,17 +4,17 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import type { TestimonialsSection as TestimonialsSectionType } from "@/types";
+import type { CoordinatorsSection as CoordinatorsSectionType } from "@/types";
 
-interface TestimonialsProps {
-  data: TestimonialsSectionType;
+interface CoordinatorsProps {
+  data: CoordinatorsSectionType;
 }
 
-export default function Testimonials({ data }: TestimonialsProps) {
+export default function Coordinators({ data }: CoordinatorsProps) {
   const [active, setActive] = useState(0);
 
-  const prev = () => setActive((p) => (p === 0 ? data.testimonials.length - 1 : p - 1));
-  const next = () => setActive((p) => (p === data.testimonials.length - 1 ? 0 : p + 1));
+  const prev = () => setActive((p) => (p === 0 ? data.coordinators.length - 1 : p - 1));
+  const next = () => setActive((p) => (p === data.coordinators.length - 1 ? 0 : p + 1));
 
   return (
     <section className="py-16 md:py-24 bg-cream">
@@ -32,7 +32,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {data.testimonials.map((t, i) => (
+          {data.coordinators.map((t, i) => (
             <div
               key={t._id}
               className={`transition-all duration-300 ${i === active ? "opacity-100" : "opacity-40 hidden md:block"}`}
@@ -41,7 +41,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
                 {/* Avatar */}
                 <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-lg mb-5">
                   <Image
-                    src={t.photo?.asset?.url || `/images/testimonial-photo-${i + 1}.png`}
+                    src={t.photo?.asset?.url || `/images/coordinator-photo-${i + 1}.png`}
                     alt={t.name}
                     width={96}
                     height={96}
@@ -61,7 +61,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
           <button onClick={prev} className="w-9 h-9 bg-white border border-dark/10 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-colors">
             <ChevronLeft size={16} />
           </button>
-          {data.testimonials.map((_, i) => (
+          {data.coordinators.map((_, i) => (
             <button
               key={i}
               onClick={() => setActive(i)}

@@ -1,4 +1,4 @@
-import { getPrograms, getNews, getTestimonials } from "@/lib/sanity/queries";
+import { getPrograms, getNews, getCoordinators } from "@/lib/sanity/queries";
 import { mockHomepage } from "@/lib/sanity/mockData";
 import { mergeWithFallback } from "@/lib/sanity/client";
 import Hero from "@/components/sections/Hero";
@@ -6,11 +6,12 @@ import About from "@/components/sections/About";
 import StatsBar from "@/components/sections/StatsBar";
 import Programs from "@/components/sections/Programs";
 import ApplicationForm from "@/components/sections/ApplicationForm";
-import Testimonials from "@/components/sections/Testimonials";
+import Coordinators from "@/components/sections/Coordinators";
 import Courses from "@/components/sections/Courses";
 import News from "@/components/sections/News";
 import CampusLife from "@/components/sections/CampusLife";
 import type { HomepageData } from "@/types";
+import Participants from "@/components/sections/Participants";
 
 export const revalidate = 60; // ISR — revalidate every 60 seconds
 
@@ -19,11 +20,11 @@ export default async function HomePage() {
   let data: HomepageData = mockHomepage;
 
   try {
-    // Fetch only Programs, News, and Testimonials from Sanity
-    const [programsData, newsData, testimonialsData] = await Promise.all([
+    // Fetch only Programs, News, and Coordinators from Sanity
+    const [programsData, newsData, coordinatorsData] = await Promise.all([
       getPrograms(),
       getNews(),
-      getTestimonials(),
+      getCoordinators(),
     ]);
 
     // Merge Sanity data with mock data for these sections only
@@ -33,8 +34,8 @@ export default async function HomePage() {
     if (newsData) {
       data.newsSection = mergeWithFallback(newsData, mockHomepage.newsSection);
     }
-    if (testimonialsData) {
-      data.testimonialsSection = mergeWithFallback(testimonialsData, mockHomepage.testimonialsSection);
+    if (coordinatorsData) {
+      data.coordinatorsSection = mergeWithFallback(coordinatorsData, mockHomepage.coordinatorsSection);
     }
   } catch {
     // Falls back to mock data in development or when Sanity is not configured
@@ -46,9 +47,10 @@ export default async function HomePage() {
       <About data={data.aboutSection} />
       <StatsBar data={data.statsBar} />
       <Programs data={data.programsSection} />
-      <ApplicationForm data={data.applicationForm} />
-      <Testimonials data={data.testimonialsSection} />
+      {/* <ApplicationForm data={data.applicationForm} /> */}
+      <Coordinators data={data.coordinatorsSection} />
       <Courses data={data.coursesSection} />
+      <Participants data={data.participantsSection} />
       <News data={data.newsSection} />
       <CampusLife data={data.campusLifeSection} />
     </>

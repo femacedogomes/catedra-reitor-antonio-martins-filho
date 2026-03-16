@@ -5,17 +5,8 @@ import type { HomepageData, NavigationData, FooterData } from "@/types";
 export const mockNavigation: NavigationData = {
   logoText: "CATEDRA",
   links: [
-    { label: "A Cátedra", href: "/about" },
-    {
-      label: "Formação",
-      href: "/formacao",
-      children: [
-        { label: "Trilha Teórica", href: "/formacao/trilha-teorica" },
-        { label: "Trilha Prática", href: "/formacao/trilha-pratica" },
-        { label: "Residência e Mentoria", href: "/formacao/residencia-mentoria" },
-        { label: "Projeto de Conclusão", href: "/formacao/projeto-conclusao" },
-      ],
-    },
+    { label: "A Cátedra", href: "/sobre-nos" },
+    { label: "Responsáveis", href: "/responsaveis" },
     { label: "Bolsa Reitoral", href: "/bolsa-reitoral" },
     { label: "Edital", href: "/bolsa-reitoral/edital" },
     { label: "Notícias", href: "/noticias" },
@@ -194,12 +185,12 @@ export const mockHomepage: HomepageData = {
     submitLabel: "Ir para o Formulário Oficial de Inscrição",
   },
 
-  testimonialsSection: {
+  coordinatorsSection: {
     eyebrow: "Quem Acredita na Cátedra",
     title: "Vozes do Programa",
     ctaLabel: "Saiba Mais",
     ctaHref: "/about",
-    testimonials: [
+    coordinators: [
       {
         _id: "1",
         name: "João Bosco Ribeiro Neto",
@@ -313,4 +304,227 @@ export const mockHomepage: HomepageData = {
     ctaHref: "/about/cea",
     gallery: [],
   },
+};
+// ─── Notícias Mock ────────────────────────────────────────────────────────────
+
+export const mockNewsPosts = [
+  {
+    _id: "1",
+    title: "UFC e Mucuripe lançam edital para selecionar 21 bolsistas reitorais de liderança",
+    category: "Edital",
+    date: "2025-10-10",
+    readTime: "5 min de leitura",
+    slug: { current: "edital-bolsa-reitoral-lideranca" },
+    image: { asset: { url: "/images/news-card-1.png" } },
+    author: { name: "Equipe Cátedra", role: "UFC", photo: { asset: { url: "/images/author-avatar-1.png" } } },
+  },
+  {
+    _id: "2",
+    title: "Termo Aditivo n° 01 atualiza regras de elegibilidade do processo seletivo",
+    category: "Atualização",
+    date: "2025-10-15",
+    readTime: "3 min de leitura",
+    slug: { current: "termo-aditivo-01-processo-seletivo" },
+    image: { asset: { url: "/images/news-card-2.png" } },
+    author: { name: "Equipe Cátedra", role: "UFC", photo: { asset: { url: "/images/author-avatar-1.png" } } },
+  },
+  {
+    _id: "3",
+    title: "Primeira Cátedra da história da UFC é lançada nas comemorações dos 70 anos da universidade",
+    category: "Institucional",
+    date: "2025-10-08",
+    readTime: "4 min de leitura",
+    slug: { current: "lancamento-catedra-70-anos-ufc" },
+    image: { asset: { url: "/images/news-card-3.png" } },
+    author: { name: "Equipe Cátedra", role: "UFC", photo: { asset: { url: "/images/author-avatar-1.png" } } },
+  },
+  {
+    _id: "4",
+    title: "Bolsa Reitoral é inspirada em Rhodes Scholarships e Schwarzman Scholars",
+    category: "Programa",
+    date: "2025-10-05",
+    readTime: "4 min de leitura",
+    slug: { current: "inspiracao-bolsas-internacionais" },
+    image: { asset: { url: "/images/news-card-1.png" } },
+    author: { name: "Instituto Mucuripe", role: "Parceiro", photo: { asset: { url: "/images/author-avatar-2.png" } } },
+  },
+  {
+    _id: "5",
+    title: "Dep. Mauro Benevides Filho destaca importância da Bolsa Reitoral para o Ceará",
+    category: "Política",
+    date: "2025-10-03",
+    readTime: "3 min de leitura",
+    slug: { current: "mauro-benevides-bolsa-reitoral" },
+    image: { asset: { url: "/images/news-card-2.png" } },
+    author: { name: "Equipe Cátedra", role: "UFC", photo: { asset: { url: "/images/author-avatar-1.png" } } },
+  },
+  {
+    _id: "6",
+    title: "CEA/UFC apresenta ciclo de sete cátedras temáticas para os próximos anos",
+    category: "Institucional",
+    date: "2025-09-28",
+    readTime: "5 min de leitura",
+    slug: { current: "ciclo-catedras-cea-ufc" },
+    image: { asset: { url: "/images/news-card-3.png" } },
+    author: { name: "Equipe Cátedra", role: "UFC", photo: { asset: { url: "/images/author-avatar-1.png" } } },
+  },
+];
+
+// ─── About Mock ───────────────────────────────────────────────────────────────
+
+export const mockAboutPage = {
+  mission: "Formar lideranças comprometidas com o desenvolvimento nacional e do Ceará, promovendo o debate qualificado sobre temas contemporâneos de interesse social sob a ótica da história, da política, da economia e da área jurídica.",
+  history: "A Cátedra Reitor Antônio Martins Filho homenageia o fundador e primeiro reitor da UFC, cuja liderança foi decisiva para a consolidação do ensino superior no Ceará. Antônio Martins Filho foi responsável pela criação de 3 universidades no Ceará no Século XX — um feito sem precedentes que transformou o ensino superior do estado. A Cátedra inaugura um ciclo de sete cátedras temáticas no âmbito do Colégio de Estudos Avançados (CEA) da UFC.",
+  team: [
+    { name: "Profa. Dra. Cynara Monteiro Mariano", role: "Coordenadora da Cátedra", bio: "Professora da UFC e coordenadora da Cátedra Reitor Antônio Martins Filho.", photo: { asset: { url: "/images/team-1.png" } } },
+    { name: "João Bosco Ribeiro Neto", role: "Presidente do Instituto Mucuripe", bio: "Fundador do Instituto Mucuripe de Liderança e Desenvolvimento e proponente técnico da Bolsa Reitoral.", photo: { asset: { url: "/images/team-2.png" } } },
+  ],
+  partners: [
+    { name: "Universidade Federal do Ceará", href: "https://ufc.br" },
+    { name: "Instituto Mucuripe de Liderança e Desenvolvimento", href: "https://institutomucuripe.org.br" },
+    { name: "Fundação CETREDE", href: "https://cetrede.com.br" },
+    { name: "Dep. Federal Mauro Benevides Filho", href: "#" },
+  ],
+};
+
+// ─── Bolsa Reitoral Mock ──────────────────────────────────────────────────────
+
+export const mockBolsaReitoralPage = {
+  overview: "A Bolsa Reitoral de Liderança é o projeto inaugural da Cátedra Reitor Antônio Martins Filho, desenvolvida pela UFC em parceria com o Instituto Mucuripe. Inspirada em experiências internacionais como a Rhodes Scholarships, a Schwarzman Scholars e a Chevening Scholarships, o programa concede 21 bolsas mensais de R$ 1.500 a estudantes de graduação da UFC ao longo de 15 meses.",
+  eligibility: [
+    { text: "Estar regularmente matriculado em curso de graduação (bacharelado ou licenciatura) da UFC" },
+    { text: "Ter entre 40% e 75% da carga horária do curso integralizada" },
+    { text: "Não estar em regime de internato ou com matrícula inativa, trancada ou irregular" },
+    { text: "Não possuir vínculo empregatício ou estágio remunerado incompatível com a carga horária da bolsa" },
+    { text: "Não acumular outra bolsa de fomento governamental ou institucional" },
+  ],
+  timeline: [
+    { period: "10/10/2025", activity: "Lançamento do edital do processo seletivo" },
+    { period: "15/10 a 14/11/2025", activity: "Período de inscrições on-line" },
+    { period: "17/11/2025", activity: "Divulgação das inscrições deferidas" },
+    { period: "22/11 a 02/12/2025", activity: "Análise e avaliação documental" },
+    { period: "03/12/2025", activity: "Resultado preliminar da 1ª fase" },
+    { period: "09/12/2025", activity: "Resultado final da 1ª fase e convocação para entrevistas" },
+    { period: "11 e 12/12/2025", activity: "Entrevistas presenciais" },
+    { period: "12/01/2026", activity: "Resultado preliminar das entrevistas" },
+    { period: "16/01/2026", activity: "Resultado definitivo do processo seletivo" },
+    { period: "Fevereiro/2026", activity: "Início das atividades do programa" },
+    { period: "Junho/2027", activity: "Cerimônia de formatura" },
+  ],
+  selectionStages: [
+    {
+      stage: "1ª Etapa",
+      title: "Análise Documental — Eliminatória",
+      description: "Avaliação da documentação enviada no ato da inscrição.",
+      items: [
+        { text: "Histórico Escolar (IRA) — até 1,0 ponto" },
+        { text: "Curriculum Vitae com experiências de liderança — até 2,0 pontos" },
+        { text: "Carta de Motivação (até 750 palavras) — até 2,0 pontos" },
+        { text: "Ensaio dissertativo-argumentativo (até 6.000 caracteres) — até 5,0 pontos" },
+      ],
+    },
+    {
+      stage: "2ª Etapa",
+      title: "Entrevista Presencial — Classificatória",
+      description: "Entrevista de 30 minutos conduzida por banca com 3 avaliadores, incluindo um líder da sociedade civil cearense.",
+      items: [
+        { text: "Articulação da trajetória com o projeto de liderança — até 4,0 pontos" },
+        { text: "Capacidade argumentativa sobre o programa — até 3,0 pontos" },
+        { text: "Domínio do conteúdo do ensaio apresentado — até 3,0 pontos" },
+      ],
+    },
+  ],
+  affirmativeActions: {
+    total: 7,
+    description: "Das 21 vagas, 7 são destinadas a políticas de ações afirmativas: 6 para candidatos negros, indígenas e quilombolas, e 1 para pessoas com deficiência, conforme Resolução nº 15/CEPE de 01/12/2023.",
+  },
+  documentsRequired: [
+    { text: "Documento oficial de identificação com foto (RG, CNH, Passaporte etc.)" },
+    { text: "CPF (caso não conste no documento de identificação)" },
+    { text: "Declaração ou atestado de matrícula regular na UFC" },
+    { text: "Histórico escolar do curso de graduação (emitido pelo SIGAA)" },
+    { text: "Curriculum Vitae — até 2 laudas com experiências de liderança e protagonismo" },
+    { text: "Carta de Motivação — até 750 palavras com projeto pessoal de liderança" },
+    { text: "Ensaio dissertativo-argumentativo — até 6.000 caracteres sobre tema do Anexo II" },
+    { text: "Até 3 cartas de recomendação de mentores, orientadores ou lideranças" },
+  ],
+  ctaLabel: "Acessar Formulário de Inscrição",
+  ctaHref: "https://forms.gle/83f89QL11ubfgoXPA",
+};
+
+// ─── Formação Mock ────────────────────────────────────────────────────────────
+
+export const mockFormacaoPage = {
+  overview: "O programa tem carga horária total de 1.500 horas distribuídas em 15 meses, com 100 horas mensais. A formação é estruturada em quatro grandes eixos: trilha teórica, trilha prática, residência e mentoria em liderança, e desenvolvimento do projeto de conclusão.",
+  axes: [
+    {
+      title: "Trilha Teórica",
+      type: "Seminários e Pesquisa",
+      totalHours: "462h",
+      description: "Pesquisa bibliográfica, elaboração de ensaios acadêmicos e seminários com convidados, abrangendo temas de história do Brasil e do Ceará, organização social, política e econômica nacional e internacional, agendas e desafios do século XXI.",
+      items: [
+        { text: "Atividades de pesquisa e orientação com tutores — 168h" },
+        { text: "Seminários temáticos com autoridades e intelectuais — 126h" },
+        { text: "Carga horária individual para pesquisa autônoma — 168h" },
+      ],
+    },
+    {
+      title: "Trilha Prática",
+      type: "Oficinas de Liderança",
+      totalHours: "60h",
+      description: "Oficinas voltadas ao desenvolvimento de habilidades práticas de liderança para o século XXI: gestão estratégica, comunicação institucional, negociação, análise de risco e tomada de decisão em ambientes complexos.",
+      items: [
+        { text: "Oficinas de competências técnicas e estratégicas" },
+        { text: "Instrumentalização com ferramentas de gestão e liderança organizacional" },
+        { text: "Diálogo com lideranças do setor público, privado e social" },
+      ],
+    },
+    {
+      title: "Residência e Mentoria",
+      type: "Orientação Individual",
+      totalHours: "196h",
+      description: "Cada bolsista recebe um mentor exclusivo, escolhido entre líderes consolidados do setor em que pretende atuar. São 4 horas semanais de residência presencial junto ao mentor ao longo de 10 meses.",
+      items: [
+        { text: "Residência em instituições parceiras — 136h" },
+        { text: "Atividades de mentoria individual — 30h" },
+        { text: "Sessões de orientação vocacional e de carreiras — 30h" },
+      ],
+    },
+    {
+      title: "Projeto de Conclusão",
+      type: "Intervenção Social",
+      totalHours: "200h",
+      description: "Proposta de estratégia de intervenção ou política pública, elaborada em grupo sob orientação de tutores e mentores, com foco em soluções inovadoras para desafios sociais relevantes. Os melhores projetos podem receber apoio para captação de fomento.",
+      items: [
+        { text: "Formação teórico-prática em desenvolvimento de projetos — 40h" },
+        { text: "Desenvolvimento e apresentação do projeto de conclusão — 200h" },
+        { text: "Avaliação por comissão especializada" },
+      ],
+    },
+  ],
+  profiles: [
+    { code: "PE1", title: "Análise crítica e leitura de conjuntura", description: "Compreende os elementos sociológicos, políticos e econômicos da sociedade contemporânea com robustez teórica e empírica." },
+    { code: "PE2", title: "Diagnóstico e solução de problemas", description: "Domina ferramentas para mapear cenários, formular diagnósticos e propor soluções sustentadas em evidência e sensibilidade política." },
+    { code: "PE3", title: "Competências técnicas de liderança", description: "Capacitado para planejamento estratégico, gestão de pessoas, comunicação institucional e tomada de decisão em diferentes esferas." },
+    { code: "PE4", title: "Ética e responsabilidade pública", description: "Atua com clareza de propósito e compromisso com o bem comum, articulando vocação pessoal com princípios de justiça e sustentabilidade." },
+    { code: "PE5", title: "Construção de consensos e alianças", description: "Mobiliza competências comunicacionais para mediar conflitos, construir consensos e estabelecer alianças com atores diversos." },
+    { code: "PE6", title: "Rede intergeracional de lideranças", description: "Integra rede multissetorial de lideranças estratégicas, ampliando capacidade de incidência e desenvolvimento profissional." },
+  ],
+};
+
+// ─── Contato Mock ─────────────────────────────────────────────────────────────
+
+export const mockContatoPage = {
+  email: "catedraramf@ufc.br",
+  phone: null,
+  address: "Colégio de Estudos Avançados — CEA/UFC, Fortaleza, Ceará",
+  faq: [
+    { question: "Quem pode se inscrever na Bolsa Reitoral?", answer: "Estudantes regularmente matriculados em qualquer curso de graduação (bacharelado ou licenciatura) da UFC, com carga horária integralizada entre 40% e 75% de seu curso." },
+    { question: "Há alguma taxa de inscrição?", answer: "Não. Não será exigido nenhum tipo de pagamento — seja taxa de inscrição, matrícula, mensalidade ou qualquer outra cobrança — durante todo o processo e vigência da bolsa." },
+    { question: "Qual é o valor da bolsa e por quanto tempo é paga?", answer: "R$ 1.500,00 mensais durante os 15 meses do programa, de fevereiro de 2026 a abril de 2027." },
+    { question: "Posso acumular a Bolsa Reitoral com outro emprego ou estágio?", answer: "Não é permitido o acúmulo com vínculo empregatício ou estágio remunerado incompatível com a carga horária da bolsa (100h mensais), nem com outra bolsa de fomento governamental ou institucional." },
+    { question: "As atividades são presenciais?", answer: "Sim. As atividades ocorrem presencialmente em Fortaleza, preferencialmente às quartas (13h–19h) e sextas (8h–18h). A frequência mínima exigida é de 75%, aferida mensalmente." },
+    { question: "Como funciona a mentoria?", answer: "Cada bolsista recebe um mentor exclusivo, escolhido entre líderes consolidados do setor em que pretende atuar. São 4 horas semanais de residência junto ao mentor ao longo de 10 meses." },
+    { question: "Posso enviar dúvidas sobre o processo seletivo?", answer: "Sim. Envie e-mail para catedraramf@ufc.br. Para cancelamento de inscrição ou correção de dados, o e-mail também é o canal oficial." },
+  ],
 };

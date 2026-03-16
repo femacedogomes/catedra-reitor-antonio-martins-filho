@@ -183,6 +183,27 @@ export interface FooterData {
 
 // ─── Homepage ─────────────────────────────────────────────────────────────────
 
+// ─── Participants ─────────────────────────────────────────────────────────────
+
+export interface Participant {
+  _id: string;
+  name: string;
+  course: string;
+  bio: string;
+  photo?: SanityImage;
+}
+
+export interface ParticipantsSection {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  ctaLabel: string;
+  ctaHref: string;
+  participants: Participant[];
+}
+
+// ─── Homepage ─────────────────────────────────────────────────────────────────
+
 export interface HomepageData {
   hero: HeroData;
   aboutSection: AboutSection;
@@ -190,6 +211,7 @@ export interface HomepageData {
   programsSection: ProgramsSection;
   applicationForm: ApplicationForm;
   testimonialsSection: TestimonialsSection;
+  participantsSection: ParticipantsSection;
   coursesSection: CoursesSection;
   newsSection: NewsSection;
   campusLifeSection: CampusLifeSection;

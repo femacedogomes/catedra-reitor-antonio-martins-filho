@@ -24,9 +24,9 @@ export const courseSchema = {
   ],
 };
 
-export const testimonialSchema = {
-  name: "testimonial",
-  title: "Testimonials",
+export const coordinatorSchema = {
+  name: "coordinator",
+  title: "Coordinators",
   type: "document",
   fields: [
     { name: "name", title: "Name", type: "string" },

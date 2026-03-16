@@ -134,10 +134,10 @@ export const homepageSchema = {
     },
     */
 
-    // Testimonials Section — ATIVO NO SANITY
+    // Coordinators Section — ATIVO NO SANITY
     {
-      name: "testimonialsSection",
-      title: "Testimonials Section",
+      name: "coordinatorsSection",
+      title: "Coordinators Section",
       type: "object",
       fields: [
         { name: "eyebrow", title: "Eyebrow", type: "string" },
@@ -145,10 +145,10 @@ export const homepageSchema = {
         { name: "ctaLabel", title: "CTA Label", type: "string" },
         { name: "ctaHref", title: "CTA Link", type: "string" },
         {
-          name: "testimonials",
-          title: "Testimonials",
+          name: "coordinators",
+          title: "Coordinators",
           type: "array",
-          of: [{ type: "reference", to: [{ type: "testimonial" }] }],
+          of: [{ type: "reference", to: [{ type: "coordinator" }] }],
         },
       ],
     },

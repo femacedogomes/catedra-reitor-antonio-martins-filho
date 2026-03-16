@@ -43,16 +43,16 @@ export async function getNews() {
   `);
 }
 
-// ─── Testimonials ────────────────────────────────────────────────────────────
+// ─── Coordinators ────────────────────────────────────────────────────────────
 
-export async function getTestimonials() {
+export async function getCoordinators() {
   return client.fetch(`
-    *[_type == "homepage"][0].testimonialsSection {
+    *[_type == "homepage"][0].coordinatorsSection {
       eyebrow,
       title,
       ctaLabel,
       ctaHref,
-      testimonials[]-> {
+      coordinators[]-> {
         _id,
         name,
         role,

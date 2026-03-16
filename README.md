@@ -26,7 +26,7 @@ src/
 │       ├── StatsBar.tsx        # 3 colunas de estatísticas
 │       ├── Programs.tsx        # Grid escuro com cards de programas
 │       ├── ApplicationForm.tsx # "use client" — formulário de inscrição
-│       ├── Testimonials.tsx    # "use client" — carrossel de depoimentos
+│       ├── Coordinators.tsx    # "use client" — carrossel de coordenadores
 │       ├── Courses.tsx         # Grid vinho com cursos
 │       ├── News.tsx            # Cards de notícias
 │       └── CampusLife.tsx      # Seção com imagem e galeria
@@ -40,7 +40,7 @@ src/
 │   ├── sanity.config.ts        # Configuração do Sanity Studio
 │   └── schemas/
 │       ├── homepage.ts         # Schema da homepage
-│       └── index.ts            # Schemas: program, course, testimonial, newsPost, navigation, footer
+│       └── index.ts            # Schemas: program, course, coordinator, newsPost, navigation, footer
 │
 └── types/
     └── index.ts                # TypeScript types para todos os dados
@@ -96,7 +96,7 @@ npm run dev
 | `homepage` | Toda a homepage (hero, about, stats, form, etc.) |
 | `program` | Programas acadêmicos (BA, MSc, PhD...) |
 | `course` | Cursos individuais |
-| `testimonial` | Depoimentos de alunos |
+| `coordinator` | Coordenadores e responsáveis |
 | `newsPost` | Notícias e artigos |
 | `navigation` | Menu de navegação |
 | `footer` | Rodapé com colunas e redes sociais |
@@ -113,7 +113,7 @@ Adicione as imagens placeholder na pasta `public/images/`:
 | `about-left-image-1.png` | Seção About |
 | `program-card-1..4.png` | Cards de Programas |
 | `application-form-campus-1.png` | Formulário de inscrição |
-| `testimonial-photo-1..3.png` | Fotos de depoimentos |
+| `coordinator-photo-1..3.png` | Fotos de coordenadores |
 | `course-card-1..6.png` | Cards de Cursos |
 | `news-card-1..3.png` | Cards de Notícias |
 | `campus-life-main-1.png` | Seção Campus Life |
