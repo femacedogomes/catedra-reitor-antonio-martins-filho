@@ -115,6 +115,24 @@ export interface TestimonialsSection {
   testimonials: Testimonial[];
 }
 
+// ─── Coordinators ────────────────────────────────────────────────────────────
+
+export interface Coordinator {
+  _id: string;
+  name: string;
+  role: string;
+  quote: string;
+  photo?: SanityImage;
+}
+
+export interface CoordinatorsSection {
+  eyebrow: string;
+  title: string;
+  ctaLabel: string;
+  ctaHref: string;
+  coordinators: Coordinator[];
+}
+
 // ─── Courses ──────────────────────────────────────────────────────────────────
 
 export interface Course {
@@ -211,6 +229,7 @@ export interface HomepageData {
   programsSection: ProgramsSection;
   applicationForm: ApplicationForm;
   testimonialsSection: TestimonialsSection;
+  coordinatorsSection: CoordinatorsSection;
   participantsSection: ParticipantsSection;
   coursesSection: CoursesSection;
   newsSection: NewsSection;

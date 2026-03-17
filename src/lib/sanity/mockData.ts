@@ -185,6 +185,29 @@ export const mockHomepage: HomepageData = {
     submitLabel: "Ir para o Formulário Oficial de Inscrição",
   },
 
+  testimonialsSection: {
+    eyebrow: "Depoimentos",
+    title: "O Que Dizem os Participantes",
+    ctaLabel: "Ver Mais Histórias",
+    ctaHref: "/testimonios",
+    testimonials: [
+      {
+        _id: "1",
+        name: "Participante 1",
+        role: "Bolsista Reitoral — Direito",
+        quote: "A experiência na Cátedra transformou minha trajetória académica e profissional.",
+        photo: { asset: { url: "/images/testimonial-1.png" } },
+      },
+      {
+        _id: "2",
+        name: "Participante 2",
+        role: "Bolsista Reitoral — Administração",
+        quote: "Tive a oportunidade de aprender com os melhores líderes do país.",
+        photo: { asset: { url: "/images/testimonial-2.png" } },
+      },
+    ],
+  },
+
   coordinatorsSection: {
     eyebrow: "Quem Acredita na Cátedra",
     title: "Vozes do Programa",
@@ -208,6 +231,30 @@ export const mockHomepage: HomepageData = {
         name: "Bolsista Reitoral",
         role: "Estudante de Graduação — UFC",
         quote: "Estar vinculado ao Gabinete do Reitor e ter acesso a mentores de referência nos setores público e privado é uma experiência transformadora. Nunca imaginei ter esse nível de formação ainda na graduação.",
+      },
+    ],
+  },
+
+  participantsSection: {
+    eyebrow: "Bolsistas Reitorais",
+    title: "Conheça Nossos Participantes",
+    subtitle: "21 líderes em formação de diferentes cursos e origens",
+    ctaLabel: "Ver Todos os Bolsistas",
+    ctaHref: "/responsaveis",
+    participants: [
+      {
+        _id: "1",
+        name: "Bolsista Destaque",
+        course: "Graduação",
+        bio: "Estudante dedicado ao desenvolvimento de liderança.",
+        photo: { asset: { url: "/images/participant-1.png" } },
+      },
+      {
+        _id: "2",
+        name: "Outro Bolsista",
+        course: "Graduação",
+        bio: "Comprometido com a transformação social.",
+        photo: { asset: { url: "/images/participant-2.png" } },
       },
     ],
   },
