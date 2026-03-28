@@ -12,27 +12,28 @@ interface AboutProps {
 
 export default function About({ data }: AboutProps) {
   const [activeTab, setActiveTab] = useState(0);
-  // Use provided image or fallback to default
-  const imageUrl = data.leftImage?.asset?.url || "/images/about-left-image-1.png";
+  const imageUrl = "/assets/hero-1.jpg";
 
   return (
-    <section className="py-16 md:py-24 bg-cream">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
+    <section className="relative py-16 md:py-24 bg-cream overflow-hidden">
+
+
+      <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
           {/* Left — Image */}
           <div className="relative">
-            <div className="relative aspect-[4/5] overflow-hidden">
-              <Image
-                src={imageUrl}
-                alt="University campus"
-                fill
-                className="object-cover"
-              />
+            <div className="relative aspect-[4/5] overflow-hidden mr-6">
+              <Image src={imageUrl} alt="Cátedra UFC" fill className="object-cover" />
             </div>
-            {/* Badge */}
+            {/* Badge vermelho */}
             <div className="absolute bottom-6 right-6 bg-primary text-white p-5 text-center shadow-xl">
               <span className="block font-serif text-3xl font-bold">{data.badgeValue}</span>
               <span className="block text-xs tracking-wider uppercase mt-1 text-white/80">{data.badgeLabel}</span>
+            </div>
+            {/* Fita laranja — só no canto superior da imagem, 1 instância */}
+            <div className="absolute top-0 -right-10 w-16 opacity-90 pointer-events-none select-none">
+              <Image src="/assets/fita-laranja.svg" alt="" width={64} height={64} className="w-full h-auto" />
             </div>
           </div>
 
@@ -42,7 +43,6 @@ export default function About({ data }: AboutProps) {
             <h2 className="section-title mb-5">{data.title}</h2>
             <p className="text-dark/60 text-sm leading-relaxed mb-6">{data.description}</p>
 
-            {/* Tabs */}
             {data.tabs && data.tabs.length > 0 && (
               <div className="mb-6">
                 <div className="flex gap-1 mb-4 border-b border-dark/10">
@@ -51,22 +51,17 @@ export default function About({ data }: AboutProps) {
                       key={tab.label}
                       onClick={() => setActiveTab(i)}
                       className={`px-5 py-2.5 text-sm font-semibold tracking-wide transition-colors border-b-2 -mb-px ${
-                        activeTab === i
-                          ? "border-primary text-primary"
-                          : "border-transparent text-dark/50 hover:text-dark"
+                        activeTab === i ? "border-primary text-primary" : "border-transparent text-dark/50 hover:text-dark"
                       }`}
                     >
                       {tab.label}
                     </button>
                   ))}
                 </div>
-                <p className="text-dark/60 text-sm leading-relaxed">
-                  {data.tabs[activeTab]?.content}
-                </p>
+                <p className="text-dark/60 text-sm leading-relaxed">{data.tabs[activeTab]?.content}</p>
               </div>
             )}
 
-            {/* Highlights */}
             {data.highlights && data.highlights.length > 0 && (
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-8">
                 {data.highlights.map((h, i) => (
@@ -78,9 +73,7 @@ export default function About({ data }: AboutProps) {
               </ul>
             )}
 
-            <Link href={data.ctaHref} className="btn-primary text-xs">
-              {data.ctaLabel}
-            </Link>
+            <Link href={data.ctaHref} className="btn-primary text-xs">{data.ctaLabel}</Link>
           </div>
         </div>
       </div>

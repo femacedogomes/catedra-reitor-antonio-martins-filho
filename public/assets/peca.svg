@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" id="Camada_2" data-name="Camada 2" viewBox="0 0 461.5 537.37" width="461.5" height="537.3699951171875">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #197f85;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <path class="cls-1" d="m0,0v537.37s461.5,0,461.5,0v-3.44C461.5,245.85,273.68,11.06,38.5,0H0Z"/>
+  </g>
+</svg>

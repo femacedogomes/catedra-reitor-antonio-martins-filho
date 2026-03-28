@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import type { NavigationData } from "@/types";
 
@@ -14,17 +15,18 @@ export default function Navbar({ data }: NavbarProps) {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-dark/95 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-dark backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="flex items-center justify-between py-4">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary flex items-center justify-center">
-              <span className="text-white font-serif font-bold text-sm">U</span>
-            </div>
-            <span className="text-white font-serif font-bold text-xl tracking-wider">
-              {data.logoText}
-            </span>
+        <div className="flex items-center justify-between py-3">
+          {/* Logo SVG real */}
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/assets/logo-cor.svg"
+              alt="Cátedra RMF"
+              width={160}
+              height={44}
+              className="w-32 md:w-40 h-auto"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -62,10 +64,7 @@ export default function Navbar({ data }: NavbarProps) {
 
           {/* CTA + Hamburger */}
           <div className="flex items-center gap-3">
-            <Link
-              href={data.ctaHref}
-              className="hidden lg:block btn-primary text-xs py-2.5"
-            >
+            <Link href={data.ctaHref} className="hidden lg:block btn-primary text-xs py-2.5">
               {data.ctaLabel}
             </Link>
             <button
@@ -108,11 +107,7 @@ export default function Navbar({ data }: NavbarProps) {
                 )}
               </div>
             ))}
-            <Link
-              href={data.ctaHref}
-              className="btn-primary mt-3 text-center text-xs"
-              onClick={() => setMobileOpen(false)}
-            >
+            <Link href={data.ctaHref} className="btn-primary mt-3 text-center text-xs" onClick={() => setMobileOpen(false)}>
               {data.ctaLabel}
             </Link>
           </nav>

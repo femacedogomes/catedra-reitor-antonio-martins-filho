@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { GraduationCap, BookOpen, Users, Award, Globe, Lightbulb } from "lucide-react";
 import type { StatItem } from "@/types";
 
@@ -16,7 +17,8 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export default function StatsBar({ data }: StatsBarProps) {
   return (
-    <section className="bg-white shadow-sm">
+    <section className="relative bg-white shadow-sm overflow-hidden">
+
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-dark/10">
           {data.map((stat, i) => (
@@ -24,7 +26,7 @@ export default function StatsBar({ data }: StatsBarProps) {
               key={i}
               className={`flex items-center gap-5 px-6 py-8 ${i === 1 ? "bg-primary text-white" : "text-dark"}`}
             >
-              <div className={`flex-shrink-0 ${i === 1 ? "text-white" : "text-primary"}`}>
+              <div className={`flex-shrink-0 ${i === 1 ? "text-white" : "text-terracota"}`}>
                 {iconMap[stat.icon] || <GraduationCap size={28} />}
               </div>
               <div>

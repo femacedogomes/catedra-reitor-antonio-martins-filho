@@ -10,20 +10,26 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#8B1A2B",
-          dark: "#6B1221",
-          light: "#A52035",
+          DEFAULT: "#750e1f",
+          dark: "#5a0b18",
+          light: "#8f1226",
         },
+        terracota: {
+          DEFAULT: "#b53d00",
+          light: "#cc4500",
+          dark: "#8f3000",
+        },
+        "slate-brand": "#b6cac9",
         dark: {
-          DEFAULT: "#1a1a1a",
-          secondary: "#2a2a2a",
+          DEFAULT: "#101d1e",
+          secondary: "#1a2e2f",
         },
-        cream: "#F5F0E8",
-        "cream-dark": "#EDE8DF",
+        cream: "#e8e9d9",
+        "cream-dark": "#dddece",
       },
       fontFamily: {
-        serif: ["Degular", "Georgia", "Times New Roman", "serif"],
-        sans: ["Degular", "'Trebuchet MS'", "Helvetica", "sans-serif"],
+        serif: ["Georgia", "Times New Roman", "serif"],
+        sans: ["'Trebuchet MS'", "Helvetica", "sans-serif"],
       },
     },
   },
